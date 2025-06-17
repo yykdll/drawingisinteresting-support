@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Drawing Perfect Shapes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #7209b7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --border: #dee2e6;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --danger: #f44336;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f7ff;
+            color: var(--dark);
+            line-height: 1.6;
+            padding-top: 20px;
+            position: relative;
+            background-image: linear-gradient(135deg, #f5f7ff 0%, #e8ebff 100%);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .app-header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 16px;
+            background: white;
+            box-shadow: var(--card-shadow);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 20px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+
+        .app-icon i {
+            font-size: 40px;
+            color: white;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+
+        .app-subtitle {
+            color: var(--gray);
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border);
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2 i {
+            margin-right: 12px;
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 20px 0 10px;
+            font-size: 18px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+        }
+
+        .highlight {
+            background-color: rgba(67, 97, 238, 0.08);
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .data-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .data-type {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .data-type:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .data-type i {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .data-type h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: var(--dark);
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            background: white;
+            border-color: var(--primary);
+            box-shadow: var(--card-shadow);
+        }
+
+        .contact-card i {
+            font-size: 28px;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(67, 97, 238, 0.3);
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(67, 97, 238, 0.4);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.15);
+            color: var(--success);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .app-subtitle {
+                font-size: 16px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            .app-icon {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- App Header -->
+        <header class="app-header">
+            <div class="app-icon">
+                <i class="fas fa-draw-polygon"></i>
+            </div>
+            <h1>Drawing Perfect Shapes</h1>
+            <p class="app-subtitle">Privacy Policy</p>
+        </header>
+        
+        <!-- Card 1: Introduction -->
+        <section class="card">
+            <h2><i class="fas fa-info-circle"></i> Introduction</h2>
+            <p>Thank you for using <strong>Drawing Perfect Shapes</strong> ("we", "us", or "our"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application (the "App").</p>
+            <p>By accessing or using the App, you agree to the terms of this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not use the App.</p>
+        </section>
+        
+        <!-- Card 2: Information We Collect -->
+        <section class="card">
+            <h2><i class="fas fa-database"></i> Information We Collect</h2>
+            <p>To provide you with the best experience and improve our services, we collect several types of information:</p>
+            
+            <div class="data-types">
+                <div class="data-type">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>Drawing Data</h3>
+                    <p>Shapes, patterns and illustrations you create within the app</p>
+                </div>
+                
+                <div class="data-type">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Usage Information</h3>
+                    <p>Progress, scores, feature interaction, and challenge completion</p>
+                </div>
+                
+                <div class="data-type">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Device Information</h3>
+                    <p>Device model, OS version, screen dimensions and settings</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Card 3: How We Use Your Data -->
+        <section class="card">
+            <h2><i class="fas fa-cogs"></i> How We Use Your Data</h2>
+            <p>We use the information we collect in various ways to provide, maintain and improve our services:</p>
+            
+            <ul>
+                <li>To provide and operate the drawing functionality</li>
+                <li>To calculate accuracy scores in real-time</li>
+                <li>To track and visualize your progress across different challenge levels</li>
+                <li>To improve the accuracy and performance of our scoring algorithms</li>
+                <li>To personalize challenge recommendations based on your skill level</li>
+                <li>To analyze app performance and crash reports for stability improvements</li>
+                <li>To develop new features, products and services</li>
+            </ul>
+            
+            <div class="highlight">
+                <p><i class="fas fa-lock"></i> <strong>Important:</strong> We do not sell or rent your personal information to third parties. All data is used exclusively to enhance your experience within the Drawing Perfect Shapes app.</p>
+            </div>
+        </section>
+        
+        <!-- Card 4: Data Storage & Security -->
+        <section class="card">
+            <h2><i class="fas fa-shield-alt"></i> Data Storage & Security</h2>
+            
+            <h3>Storage Locations</h3>
+            <ul>
+                <li><strong>Primary Storage:</strong> All data is stored locally on your device using Apple's Core Data framework</li>
+                <li><strong>iCloud Backups:</strong> If you enable iCloud synchronization, your progress will be backed up to your personal iCloud account</li>
+                <li><strong>Temporary Files:</strong> Cache files stored on-device for performance optimization</li>
+            </ul>
+            
+            <h3>Security Measures</h3>
+            <ul>
+                <li><strong>Encryption:</strong> Data encryption at rest using Apple's Data Protection API</li>
+                <li><strong>Authentication:</strong> Secure token-based authentication for premium content</li>
+                <li><strong>Access Control:</strong> Strict access controls on our development team</li>
+                <li><strong>Regular Audits:</strong> Security reviews and vulnerability testing</li>
+            </ul>
+        </section>
+        
+        <!-- Card 5: Third-Party Services -->
+        <section class="card">
+            <h2><i class="fas fa-external-link-alt"></i> Third-Party Services</h2>
+            <p>We use reputable third-party services that have their own privacy policies:</p>
+            
+            <ul>
+                <li>
+                    <strong>RevenueCat</strong> - For in-app purchase management 
+                    <a href="https://www.revenuecat.com/privacy" target="_blank" class="badge">Privacy Policy</a>
+                </li>
+                <li>
+                    <strong>Crashlytics</strong> - For crash reporting and stability monitoring 
+                    <a href="https://firebase.google.com/support/privacy" target="_blank" class="badge">Privacy Policy</a>
+                </li>
+                <li>
+                    <strong>Apple Services</strong> - For app distribution and payment processing 
+                    <a href="https://www.apple.com/legal/privacy" target="_blank" class="badge">Privacy Policy</a>
+                </li>
+            </ul>
+            
+            <div class="highlight">
+                <p><i class="fas fa-info-circle"></i> These services collect anonymous usage data only and do not have access to your personal drawings or identifiable information.</p>
+            </div>
+        </section>
+        
+        <!-- Card 6: Your Rights -->
+        <section class="card">
+            <h2><i class="fas fa-user-shield"></i> Your Privacy Rights</h2>
+            <p>You have full control over your data within the app:</p>
+            
+            <ul>
+                <li><i class="fas fa-eye"></i> <strong>Access:</strong> View your drawing history in the Gallery section</li>
+                <li><i class="fas fa-file-export"></i> <strong>Export:</strong> Save drawings as PNG files to your device</li>
+                <li><i class="fas fa-trash-alt"></i> <strong>Delete:</strong> Remove drawings individually or reset all progress</li>
+                <li><i class="fas fa-sync-alt"></i> <strong>Synchronization:</strong> Enable or disable iCloud syncing anytime</li>
+            </ul>
+            
+            <h3>GDPR & CCPA Compliance</h3>
+            <p>We fully comply with international privacy regulations. You have the right to:</p>
+            <ul>
+                <li>Request a copy of all data we have about you</li>
+                <li>Request correction of inaccurate data</li>
+                <li>Request deletion of your data</li>
+                <li>Object to or restrict certain processing activities</li>
+            </ul>
+        </section>
+        
+        <!-- Card 7: Children's Privacy -->
+        <section class="card">
+            <h2><i class="fas fa-child"></i> Children's Privacy</h2>
+            <p>Drawing Perfect Shapes is designed for users of all ages but with specific considerations for children:</p>
+            
+            <ul>
+                <li>We do not knowingly collect personal information from children under 13</li>
+                <li>All drawing activities are COPPA (Children's Online Privacy Protection Act) compliant</li>
+                <li>No targeted advertising is displayed in the app</li>
+                <li>Parental controls prevent any unintended in-app purchases</li>
+            </ul>
+        </section>
+        
+        <!-- Card 8: Contact & Updates -->
+        <section class="card">
+            <h2><i class="fas fa-envelope"></i> Contact Us & Policy Updates</h2>
+            
+            <h3>Contact Information</h3>
+            <p>For any privacy-related questions or concerns:</p>
+            
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        <p>544736399@qq.com</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <h3>Policy Updates</h3>
+            <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements.</p>
+            <ul>
+                <li><strong>Last Updated:</strong> June 17, 2025</li>
+                <li>We will notify users of significant changes through the app</li>
+                <li>Continued use after changes constitutes acceptance of the revised policy</li>
+            </ul>
+        </section>
+        
+        <!-- Confirmation Button -->
+        <div class="btn-container">
+            <button class="btn" onclick="confirmPolicy()">
+                <i class="fas fa-check-circle"></i> I Agree to the Privacy Policy
+            </button>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Drawing Perfect Shapes Studio. All rights reserved.</p>
+            <p>Privacy Policy | Terms of Service | Support</p>
+        </footer>
+    </div>
+    
+    <script>
+        function confirmPolicy() {
+            // Simulate agreement confirmation
+            const btn = document.querySelector('.btn');
+            btn.innerHTML = '<i class="fas fa-check-circle"></i> Thank You for Agreeing';
+            btn.style.backgroundColor = '#4caf50';
+            btn.disabled = true;
+            
+            // Show a confirmation message
+            alert("Thank you for reviewing our Privacy Policy. Your preferences have been saved.");
+            
+            // This is where you would implement actual consent recording logic
+        }
+        
+        // Optional: Dynamic year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
